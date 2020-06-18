@@ -85,21 +85,21 @@
     <div class="row">
         <div class="col-sm-4 text-center">
             <a href="#" class="portfolio-link" data-toggle="modal" data-target="#image1">
-                <img class="img-fluid" src="./src/caa.png">
+                <img class="img-fluid" src="./img/caa.png">
                 <h3>Basic Boids</h3>
                 <p>Cohesion, Alignment, Avoidance</p>
             </a>
         </div>
         <div class="col-sm-4 text-center">
             <a href="#" class="portfolio-link " data-toggle="modal" data-target="#image2">  
-                <img class="img-fluid" src="./src/target_follow.png">
+                <img class="img-fluid" src="./img/target_follow.png">
                 <h3>Target Following</h3>
                 <p>Center around the target</p>
             </a>
         </div>
          <div class="col-sm-4 text-center">
             <a href="#" class="portfolio-link " data-toggle="modal" data-target="#image3">
-                <img class="img-fluid" src="./src/two_flock.png">
+                <img class="img-fluid" src="./img/two_flock.png">
                 <h3>Multiple Flocks</h3>
                 <p>Include multiple flocks</p>
             </a>
@@ -109,23 +109,23 @@
     <div class="row">
         <div class="col-sm-4 text-center">
             <a href="#" class="portfolio-link" data-toggle="modal" data-target="#image4">
-                <img class="img-fluid" src="./src/obstacleAvoidance.png">
+                <img class="img-fluid" src="./img/obstacleAvoidance.png">
                 <h3>Obstacle Avoidance</h3>
                 <p>Obstacle avoidance behavior</p>
             </a>
         </div>
         <div class="col-sm-4 text-center">
             <a href="#" class="portfolio-link " data-toggle="modal" data-target="#image5">  
-                <img class="img-fluid" src="./src/flowField.png">
+                <img class="img-fluid" src="./img/flowField.png">
                 <h3>Flow Field Following</h3>
                 <p>Ocean current in nature</p>
             </a>
         </div>
          <div class="col-sm-4 text-center">
-            <a href="#" class="portfolio-link " data-toggle="modal" data-target="#image3">
-                <img class="img-fluid" src="./src/two_flock.png">
-                <h3>Multiple Flocks</h3>
-                <p>Include multiple flocks</p>
+            <a href="#" class="portfolio-link " data-toggle="modal" data-target="#image6">
+                <img class="img-fluid" src="./img/Predator.png">
+                <h3>Predator</h3>
+                <p>Ocean Ecosystem</p>
             </a>
         </div>
     </div>
@@ -140,7 +140,7 @@
         </div>
         <div class="col-sm-10 text-center">
             <video width="800" controls>
-              <source src="./src/demo.mov" type="video/mp4">
+              <source src="./src/demo.mp4" type="video/mp4">
             Your browser does not support the video tag.
             </video>
         </div>
@@ -152,7 +152,7 @@
 
 <footer class="container-fluid text-center" id="report">
     <h2>Report & Code</h2>
-    <p class="rpt"><a href="./src/report.pdf" target="_blank">Project Report</a></p>
+    <p class="rpt"><a href="./src/CS275_Report.pdf" target="_blank">Project Report</a></p>
     <p class="rpt"><a href="https://github.com/freezingstarmeng/flocking-with-boids" target="_blank">Github Repo</a></p>
     <!-- <p class="rpt"><a href="./code" target="_blank">Code Source (local)</a></p> -->
 </footer>
@@ -177,7 +177,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <img src="./src/caa.png" class="mx-auto d-block img-fluid mb-5">
+                                <img src="./img/caa.png" class="mx-auto d-block img-fluid mb-5">
                             </div>
                             <div class="col-sm-6">
                                 <h3>Cohesion</h3>
@@ -217,7 +217,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <img src="./src/target_follow.png" class="mx-auto d-block img-fluid mb-5">
+                                <img src="./img/target_follow.png" class="mx-auto d-block img-fluid mb-5">
                             </div>
                             <div class="col-sm-6">
                                 <p>If there is a target at the beginning, all other fish agents would center around the target while following three basic principles. As the target starts to move, fish agents would quickly form a moving flock following the target until the target stops and they would center around the target again.</p>
@@ -253,7 +253,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <img src="./src/two_flock.png" class="mx-auto d-block img-fluid mb-5">
+                                <img src="./img/two_flock.png" class="mx-auto d-block img-fluid mb-5">
                             </div>
                             <div class="col-sm-6">
                                 <p>The most important technique for separating the flocks is that each fish agent has to know how to filter the neighbors, and there are three steps to achieve this. For each agent, the first step is to identify which flock it belongs to. The second step is to take in a list of transforms, which means looking at all other fish around itself. The last step is to filter these transforms on some criteria.</p>
@@ -289,7 +289,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <img src="./src/obstacleAvoidance.png" class="mx-auto d-block img-fluid mb-5">
+                                <img src="./img/obstacleAvoidance.png" class="mx-auto d-block img-fluid mb-5">
                             </div>
                             <div class="col-sm-6">
                                 <p>To accomplish this, we need an obstacle filter. Before we can filter the obstacle objects, we need to set a unique property to obstacle objects thus we can easily figure out whether an object is an obstacle. We put all the obstacle objects in the "Obstacle layer". In unity, every object presented in the screen will be put in a layer. By default, all the objects will be put in the default layer. We create a new layer called "Obstacle layer", and set the layer of the obstacle objects to that layer. In the script, we can figure out an obstacle object by checking the layer of that object.</p>
@@ -306,8 +306,8 @@
     </div>
 </div>
 
-<!--image 5-->
-<div class="portfolio-modal modal" id="image5" tabindex="-1 " role="dialog " aria-hidden="true">
+<!--image 6-->
+<div class="portfolio-modal modal" id="image6" tabindex="-1 " role="dialog " aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header justify-content-end">
@@ -319,17 +319,16 @@
                 <div class="modal-body">
                     <div class="modal-inner">
                         <div class="row">
-                            <h6>Flow Field Following</h6>
-                                <p>In reality, there are ocean currents in nature, and fish flocks have the tendency to swim with ocean currents. So we implemented flow field following to simulate this behavior. </p>
+                            <h6>Predator</h6>
+                                <p>To better describe the ocean ecosystem, we need to show the fear the flock is facing, so we implemented predator and prey to simulate the Shark chasing the flock of fish. When a fish discover the appearance of its predator, its fear will be recalculated from the ratio of its comfort distance to the distance between itself and the shark. After doing the summation of the fear based on the existence of all the sharks, a new speed will be add to the fish's original speed. And the fish will move away faster from its original position.</p>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <img src="./src/flowField.png" class="mx-auto d-block img-fluid mb-5">
+                                <img src="./img/Predator.png" class="mx-auto d-block img-fluid mb-5">
                             </div>
                             <div class="col-sm-6">
-                                <p>We use flow field to simulate the ocean currents. A flow field, also know as a force field or a vector field, defines a mapping from a location in space to a flow vector. The flow vector of a particular location represents the direction of the ocean currents, and an agent has an tendency to move in the direction.</p>
-                                <p>Ocean current should be continuous, but the flow field is discrete. In our implementation, we divided the screen into 1 by 1 grids and each grid has a direction vector, forming a flow field.  In order to better simulate the ocean current, the direction vectors of nearby girds shouldn't have sharp difference. Thus we can still see a continuous pattern even if the flow field is not continuous.</p>
-                                <p>For each agent in the flock, we pass its position to the flow field object. By rounding down its x and y position, we could figure out which grid the fish belongs to. The grid will have a direction vector which represents the direction of the ocean current. We make the fish move towards that direction. Put all agents together, the flock would move with the flow field.</p>
+                                <p>For each shark in the flock of sharks, it will check the fish which is closest to itself, and find out the prey's status, whether it has been eaten by other shark, and then the shark will chase the closest fish by adjusting its direction towards the fish and improve the speed so that it can chase its target.</p>
+                                <p>When the distance between a prey and a predator is too small, which means the fish has already been eaten by the shark. The fish's death time will be calculated and its status will be set to death. At this time we cannot see this fish from the screen. And after a while, which is a certain amount of time, the fish will be respawn by the flock, and it can become the predators' target again.</p>
                             </div>
                         </div>
                     </div>

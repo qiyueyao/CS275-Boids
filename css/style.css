@@ -121,7 +121,7 @@ body {
 }
 
 .view {
-    background: url("../src/ocean-background.jpg")no-repeat center bottom fixed;
+    background: url("../img/ocean-background.jpg")no-repeat center bottom fixed;
     opacity: 0.8;
     -webkit-background-size: cover;
     -moz-background-size: cover;

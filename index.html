@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Basic Page Needs––––––––––––––––––––––––––– -->
+
+<head>
+    
+    <meta http-equiv="content-type" content="text/html">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title> CS275 </title>
+    
+    
+    <meta http-equiv="content-type" content="text/html">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title> Unity Boids </title>
+
+    <!-- Bootstrap Core CSS ––––––––––––––––––––––––––– -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS ––––––––––––––––––––––––––– -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Custom Fonts ––––––––––––––––––––––––––– -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+    <!-- To add a google font and paste the link -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <!--navigation-->
+
+<nav class="navbar navbar-expand-lg navbar-light  navbackground fixed-top">
+    <a class="navbar-brand page-scroll" href="#top">CS275</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="#abstract">Abstract</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="#images">Images</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="#demo">Demo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="#report">Report&Code</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="view text-center" id="top">
+        <h1>Fish Flocking with Boids</h1>
+        <h3>Shijia Hu, Simeng Pang, Chenlei Song, Qiyue Yao</h3>
+    </div>
+
+
+    <div class="backgroundcolor">
+    <div class="container" id="abstract">
+        <div class="row justify-content-center">
+            <div>
+                <h2 class="text-center">ABSTRACT</h2>
+                <p class="pjabstract"> 
+                    Boids was first developed by Craig Reynolds in 1986. Our group developed a program that simulates and demonstrates the flocking behavior of animals. Basically, we follow separation, alignment and cohesion rules, and determine the behavior of each individual according to those rules. We also added more complex rules into the rule set, including obstacle avoidance, target following and predators. This project was developed and visualized in Unity, a real-time development platform for 2D,3D interaction programs.
+                </p>  
+            </div>
+        </div>
+    </div>
+</div> 
+
+ 
+<div class="container-fluid" id="images">
+    <h6 class="text-center mb-5">IMAGES</h6>
+    <div class="row">
+        <div class="col-sm-4 text-center">
+            <a href="#" class="portfolio-link" data-toggle="modal" data-target="#image1">
+                <img class="img-fluid" src="./src/caa.png">
+                <h3>Basic Boids</h3>
+                <p>Cohesion, Alignment, Avoidance</p>
+            </a>
+        </div>
+        <div class="col-sm-4 text-center">
+            <a href="#" class="portfolio-link " data-toggle="modal" data-target="#image2">  
+                <img class="img-fluid" src="./src/target_follow.png">
+                <h3>Target Following</h3>
+                <p>Center around the target</p>
+            </a>
+        </div>
+         <div class="col-sm-4 text-center">
+            <a href="#" class="portfolio-link " data-toggle="modal" data-target="#image3">
+                <img class="img-fluid" src="./src/two_flock.png">
+                <h3>Multiple Flocks</h3>
+                <p>Include multiple flocks</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4 text-center">
+            <a href="#" class="portfolio-link" data-toggle="modal" data-target="#image4">
+                <img class="img-fluid" src="./src/obstacleAvoidance.png">
+                <h3>Obstacle Avoidance</h3>
+                <p>Obstacle avoidance behavior</p>
+            </a>
+        </div>
+        <div class="col-sm-4 text-center">
+            <a href="#" class="portfolio-link " data-toggle="modal" data-target="#image5">  
+                <img class="img-fluid" src="./src/flowField.png">
+                <h3>Flow Field Following</h3>
+                <p>Ocean current in nature</p>
+            </a>
+        </div>
+         <div class="col-sm-4 text-center">
+            <a href="#" class="portfolio-link " data-toggle="modal" data-target="#image3">
+                <img class="img-fluid" src="./src/two_flock.png">
+                <h3>Multiple Flocks</h3>
+                <p>Include multiple flocks</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid" id="demo">  
+    <hr>
+    <h6 class="text-center mt-5 mb-5" id="graphic">DEMO</h6>
+    <div class="row mt-5">
+        <div class="col-sm-1 text-center">
+        </div>
+        <div class="col-sm-10 text-center">
+            <video width="800" controls>
+              <source src="./src/demo.mov" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="col-sm-1 text-center">
+        </div>
+    </div> 
+</div>
+
+
+<footer class="container-fluid text-center" id="report">
+    <h2>Report & Code</h2>
+    <p class="rpt"><a href="./src/report.pdf" target="_blank">Project Report</a></p>
+    <p class="rpt"><a href="https://github.com/freezingstarmeng/flocking-with-boids" target="_blank">Github Repo</a></p>
+    <!-- <p class="rpt"><a href="./code" target="_blank">Code Source (local)</a></p> -->
+</footer>
+
+
+
+<!--image 1-->
+<div class="portfolio-modal modal" id="image1" tabindex="-1 " role="dialog " aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-end">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="container">
+                <div class="modal-body">
+                    <div class="modal-inner">
+                        <div class="row">
+                            <h6>Basic Boids</h6>
+                                <p>There are three typical behaviors with a Boids Model-cohesion, alignment, avoidance. These behaviors are appied on neighbors. For each agent (yellow fish), draw a radius of r. Any agent (blue fish) falling within the radius will be considered as neighbors.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="./src/caa.png" class="mx-auto d-block img-fluid mb-5">
+                            </div>
+                            <div class="col-sm-6">
+                                <h3>Cohesion</h3>
+                                <p>Cohesion keeps the agents move together with its neighbors. It is realized by finding the average position of the neighbors and navigating the agent towards there.</p>
+                                <h3>Alignment</h3>
+                                <p>Alignment keeps the flock in roughly the same direction by finding average direction of neighbors and aligning the agent to that direction.</p>
+                                <h3>Avoidance</h3>
+                                <p>Avoidance prevents agents from overlapping and collision. A new radius is defined smaller than the neighbor radius but larger than the agent itself. If any neighbor is in the red radius, navigate the agent away.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bottom">
+                        <a href="#" class="mr-auto" data-dismiss="modal">Back to Images</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--image 2-->
+<div class="portfolio-modal modal" id="image2" tabindex="-1 " role="dialog " aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-end">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="container">
+                <div class="modal-body">
+                    <div class="modal-inner">
+                        <div class="row">
+                            <h6>Target Following</h6>
+                                <p>Normally, fish tend to gather into flocks and move as groups. They like to wander through the water, but sometimes they might want to head to a specific target or led by a head fish to move to some place.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="./src/target_follow.png" class="mx-auto d-block img-fluid mb-5">
+                            </div>
+                            <div class="col-sm-6">
+                                <p>If there is a target at the beginning, all other fish agents would center around the target while following three basic principles. As the target starts to move, fish agents would quickly form a moving flock following the target until the target stops and they would center around the target again.</p>
+                                <p>In Unity, we achieve this behavior by always locating the target. If there is a target in the scene, for each fish agent, it always has to look for the target and calculate the distance between target and itself. At the same time, it also has to follow the alignment, avoidance and cohesion principles. Actually, seeking the target is also part of cohesion requirement, since each fish agent wants to remain the connection with the target. After locating the target, each fish agent would swim to the target with a combination force considering target distance and three principles. If the target does not move, the distance between target and fish agent does not change, so the fish flock will not have big movements.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bottom">
+                        <a href="#" class="mr-auto" data-dismiss="modal">Back to Images</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--image 3-->
+<div class="portfolio-modal modal" id="image3" tabindex="-1 " role="dialog " aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-end">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="container">
+                <div class="modal-body">
+                    <div class="modal-inner">
+                        <div class="row">
+                            <h6>Multiple Flocks</h6>
+                                <p>There are some assumption we made for different fish flocks. First of all, we assume all fish flocks follow the Boids model. Secondly, we assume all flocks exhibit the same behavior. Thirdly, we assume each flock acts independently of each other, which means they would not combine into one flock.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="./src/two_flock.png" class="mx-auto d-block img-fluid mb-5">
+                            </div>
+                            <div class="col-sm-6">
+                                <p>The most important technique for separating the flocks is that each fish agent has to know how to filter the neighbors, and there are three steps to achieve this. For each agent, the first step is to identify which flock it belongs to. The second step is to take in a list of transforms, which means looking at all other fish around itself. The last step is to filter these transforms on some criteria.</p>
+                                <p>In Unity, we can achieve first step by setting a new getter method inside the script that creates each individual agent. When the script creates the agent, it can pass itself in for the getter method. For second step, we have to add a filter. Since there are a number of transforms around each agent, it can check transform one by one to see if it is a member of the same flock. If it is, we will add it to the filtered group, otherwise it is not inside the filtered group. Finally, we can add this filter to flock's basic behavior. So now each flock still has the same behavior and each flock has the same filter for neighbors. They now act independently of each other while still swimming together with members of their own flocks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bottom">
+                        <a href="#" class="mr-auto" data-dismiss="modal">Back to Images</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--image 4-->
+<div class="portfolio-modal modal" id="image4" tabindex="-1 " role="dialog " aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-end">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="container">
+                <div class="modal-body">
+                    <div class="modal-inner">
+                        <div class="row">
+                            <h6>Obstacle Avoidance</h6>
+                                <p>The obstacle avoidance behavior is pretty similar to the basic avoidance behavior of the flocks, however, we might want to assign different weights to the agent avoidance behavior(i.e. the behavior of avoiding other agents) and obstacle avoidance behavior, we'll have to create two different avoidance behavior objects, and need to distinguish obstacle objects from agent objects.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="./src/obstacleAvoidance.png" class="mx-auto d-block img-fluid mb-5">
+                            </div>
+                            <div class="col-sm-6">
+                                <p>To accomplish this, we need an obstacle filter. Before we can filter the obstacle objects, we need to set a unique property to obstacle objects thus we can easily figure out whether an object is an obstacle. We put all the obstacle objects in the "Obstacle layer". In unity, every object presented in the screen will be put in a layer. By default, all the objects will be put in the default layer. We create a new layer called "Obstacle layer", and set the layer of the obstacle objects to that layer. In the script, we can figure out an obstacle object by checking the layer of that object.</p>
+                                <p>Inside the filter, we check the layer of each nearby objects(objects inside the agent's collision radius), and only return objects that belong to the obstacle layer. We then get a list of obstacle objects and pass this list to avoidance behavior script. The avoidance behavior script can be reused here, however this time the objects we need to avoid are a list of obstacles.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bottom">
+                        <a href="#" class="mr-auto" data-dismiss="modal">Back to Images</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--image 5-->
+<div class="portfolio-modal modal" id="image5" tabindex="-1 " role="dialog " aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-end">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="container">
+                <div class="modal-body">
+                    <div class="modal-inner">
+                        <div class="row">
+                            <h6>Flow Field Following</h6>
+                                <p>In reality, there are ocean currents in nature, and fish flocks have the tendency to swim with ocean currents. So we implemented flow field following to simulate this behavior. </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="./src/flowField.png" class="mx-auto d-block img-fluid mb-5">
+                            </div>
+                            <div class="col-sm-6">
+                                <p>We use flow field to simulate the ocean currents. A flow field, also know as a force field or a vector field, defines a mapping from a location in space to a flow vector. The flow vector of a particular location represents the direction of the ocean currents, and an agent has an tendency to move in the direction.</p>
+                                <p>Ocean current should be continuous, but the flow field is discrete. In our implementation, we divided the screen into 1 by 1 grids and each grid has a direction vector, forming a flow field.  In order to better simulate the ocean current, the direction vectors of nearby girds shouldn't have sharp difference. Thus we can still see a continuous pattern even if the flow field is not continuous.</p>
+                                <p>For each agent in the flock, we pass its position to the flow field object. By rounding down its x and y position, we could figure out which grid the fish belongs to. The grid will have a direction vector which represents the direction of the ocean current. We make the fish move towards that direction. Put all agents together, the flock would move with the flow field.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bottom">
+                        <a href="#" class="mr-auto" data-dismiss="modal">Back to Images</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+    
+    
+<script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js " integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4 " crossorigin="anonymous "></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js " integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1 " crossorigin="anonymous "></script>
+<script src="js/script.js"></script>
+<!--Animation-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js "></script>
+<!-- Custom Theme JavaScript -->
+<script src="js/animation.js"></script>
